@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>边缘检测</title>
+</head>
+<body>
+{% block content %}
+    <div class="container">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="text" name="mtd" placeholder="请在此输入处理方式"><br/>
+            <input type="submit" value="提交"><br/>
+        </form>
+    </div>
+{% endblock %}
+
+<div>
+        <div class="container">
+
+                <div class=""panel panel-default">
+                    <div class="panel-heading">
+                            <span class=""glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                            直接提交将采用默认算法处理，否则在输入框内填入"1"，将采用速度较慢的第二种算法处理,请耐心等待
+                    </div>
+                </div>
+        </div>
+</div>
+</body>
+</html>

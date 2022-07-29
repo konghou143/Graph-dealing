@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图像变换</title>
+</head>
+<body>
+{% block content %}
+    <div class="container">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="text" name="mtd" placeholder="请在此输入可选处理类型"><br/>
+            <input type="text" name="cs1" placeholder="请在此输入参数"><br/>
+            <input type="text" name="cs2" placeholder="请在此输入参数"><br/>
+            <input type="submit" value="提交"><br/>
+        </form>
+    </div>
+{% endblock %}
+
+<div>
+        <div class="container">
+
+                <div class=""panel panel-default">
+                    <div class="panel-heading">
+                            <span class=""glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                            可选处理类型有："水平翻转"，"垂直翻转"，"对角翻转"，"仿射变换"，"缩放"，"平移"，"中心旋转"
+                    </div>
+                </div>
+        </div>
+</div>
+<div>
+        <div class="container">
+
+                <div class=""panel panel-default">
+                    <div class="panel-heading">
+                            <span class=""glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                            第一格请勿填入除以上类型外的其他文字组合
+                    </div>
+                </div>
+        </div>
+</div>
+<div>
+        <div class="container">
+
+                <div class=""panel panel-default">
+                    <div class="panel-heading">
+                            <span class=""glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                            使用缩放、平移请在第二、第三格输入参数，旋转请在第二格输入参数，仿射变换仅设定了一种变换方式，无需输入
+                            例：缩放/2/2、平移/30/60、中心旋转/45
+                    </div>
+                </div>
+        </div>
+</div>
+</body>
+</html>

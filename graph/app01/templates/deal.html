@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>处理界面</title>
+</head>
+
+<body>
+<div>
+        <div class="container">
+
+                <div class=""panel panel-default">
+                    <div class="panel-heading">
+                            <span class=""glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                            请在下方提交要处理的图片
+                    </div>
+                </div>
+        </div>
+</div>
+{% block content %}
+    <div class="container">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="avatar"><br/>
+            <input type="submit" value="提交图片"><br/>
+            <span style="color: red;">{{ error_msg }}</span>
+        </form>
+    </div>
+{% endblock %}
+
+<br/>
+<br/>
+<br/>
+
+<div>
+        <div class="container">
+
+                <div class=""panel panel-default">
+                    <div class="panel-heading">
+                            <span class=""glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                            以下为可选操作列表
+                    </div>
+                </div>
+
+                <div style="...">
+                        <a class="btn btn-success" href="/sztx/">
+                                <span class=""glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+                                数字图像形态学处理
+                        </a>
+                </div>
+
+                <div style="...">
+                        <a class="btn btn-success" href="/txms/">
+                                <span class=""glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+                                图像描述
+                        </a>
+                </div>
+
+                <div style="...">
+                        <a class="btn btn-success" href="/txbh/">
+                                <span class=""glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+                                图像变换
+                        </a>
+                </div>
+
+                <div style="...">
+                        <a class="btn btn-success" href="/byjc/">
+                                <span class=""glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+                                边缘检测
+                        </a>
+                </div>
+
+                <div style="...">
+                        <a class="btn btn-success" href="/txzq/">
+                                <span class=""glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+                                图像增强（仅有C语言代码）
+                        </a>
+                </div>
+
+                <div style="...">
+                        <a class="btn btn-success" href="/zscl/">
+                                <span class=""glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+                                噪声处理
+                        </a>
+                </div>
+        </div>
+</div>
+
+</body>
+</html>

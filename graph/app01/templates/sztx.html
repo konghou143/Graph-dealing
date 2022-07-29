@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数字图像形态学</title>
+</head>
+<body>
+{% block content %}
+    <div class="container">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="text" name="mtd" placeholder="请在此输入可选处理类型"><br/>
+            <input type="submit" value="提交"><br/>
+        </form>
+    </div>
+{% endblock %}
+
+<div>
+        <div class="container">
+
+                <div class=""panel panel-default">
+                    <div class="panel-heading">
+                            <span class=""glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                            可选处理类型有："腐蚀"，"膨胀"，"开运算"，"闭运算"
+                    </div>
+                </div>
+        </div>
+</div>
+<div>
+        <div class="container">
+
+                <div class=""panel panel-default">
+                    <div class="panel-heading">
+                            <span class=""glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                            请勿填入除以上类型外的其他文字组合
+                    </div>
+                </div>
+        </div>
+</div>
+</body>
+</html>

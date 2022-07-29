@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图像增强</title>
+</head>
+<body>
+
+{% block content %}
+    <div class="container">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="text" name="mtd" placeholder="请在此输入空域/频域"><br/>
+            <input type="text" name="mtd2" placeholder="请在此输入锐化/平滑"><br/>
+            <input type="submit" value="提交"><br/>
+        </form>
+    </div>
+{% endblock %}
+
+<div>
+        <div class="container">
+
+                <div class=""panel panel-default">
+                    <div class="panel-heading">
+                            <span class=""glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                            请在第一格输入框中输入："空域"/"频域"，在第二格输入框中输入："锐化"/"平滑"
+                    </div>
+                </div>
+        </div>
+</div>
+</body>
+</html>

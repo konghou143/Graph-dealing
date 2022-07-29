@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图像描述</title>
+</head>
+<body>
+{% block content %}
+    <div class="container">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="text" name="mtd" placeholder="请在此输入可选处理类型"><br/>
+            <input type="text" name="cs" placeholder="请在此输入h,s,v/r,g,b"><br/>
+            <input type="submit" value="提交"><br/>
+        </form>
+    </div>
+{% endblock %}
+
+<div>
+        <div class="container">
+
+                <div class=""panel panel-default">
+                    <div class="panel-heading">
+                            <span class=""glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                            可选处理类型有："HSV色彩空间"，"RGB色彩空间",若使用前者，则需在第二条框内填入h/s/v，反之则填入r/g/b
+                    </div>
+                </div>
+        </div>
+</div>
+</body>
+</html>

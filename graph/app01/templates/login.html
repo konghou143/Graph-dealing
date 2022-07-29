@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>图像处理</title>
+</head>
+<body>
+
+<h1>图像处理系统·用户登陆</h1>
+<form method="post" action="/login/">
+
+        {% csrf_token %}
+
+        <input type="text" name="user" placeholder="用户名"><br/>
+        <input type="password" name="pwd" placeholder="密码"><br/>
+        <input type="submit" value="提交"/>
+        <span style="color: red;">{{ error_msg }}</span>
+</form>
+
+</body>
+</html>
